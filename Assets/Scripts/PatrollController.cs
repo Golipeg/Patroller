@@ -26,7 +26,7 @@ public class PatrollController : MonoBehaviour
        // _currentTime += Time.deltaTime;
         //var progress = _currentTime / _speed;
         
-        transform.position = Vector3.Lerp(transform.position, _points[_point].position, Time.deltaTime*_speed);
+        transform.position = Vector3.Lerp(transform.position, _points[_point].position, _speed*Time.deltaTime);
         if (Vector3.Distance(transform.position, _points[_point].position) < 0.2f)
         {
             if (_waitTime <= 0)
